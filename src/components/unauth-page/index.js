@@ -102,7 +102,7 @@ export default function UnauthPage() {
                 Frequently asked questions
               </h1>
               {questions.map((item, index) => (
-                <div className="flex flex-col gap-3">
+                <div key={index} className="flex flex-col gap-3">
                   <div
                     onClick={() =>
                       setShowCurrentAns(showCurrentAns === index ? null : index)
