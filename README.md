@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Streamify
+
+Streamify is a Netflix clone built using Next.js, Tailwind CSS, and NextAuth. This application allows users to browse, search, and watch their favorite movies and TV shows.
+
+## Features
+
+- Browse and search for movies and TV shows
+- User authentication with NextAuth
+- Responsive design with Tailwind CSS
+- Fast and efficient with Next.js
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following installed on your system:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [Node.js](https://nodejs.org/en/download/) (v14 or higher)
+- [npm](https://www.npmjs.com/get-npm) or [yarn](https://classic.yarnpkg.com/en/docs/install/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/your-username/streamify.git
+    cd streamify
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    If you're using npm:
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Or if you're using yarn:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    yarn install
+    ```
+
+3. **Set up environment variables:**
+
+    Create a `.env.local` file in the root directory and add the necessary environment variables. Refer to `.env.example` for the required variables.
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+    Update `.env.local` with your own values.
+
+### Running the Application
+
+1. **Start the development server:**
+
+    If you're using npm:
+
+    ```bash
+    npm run dev
+    ```
+
+    Or if you're using yarn:
+
+    ```bash
+    yarn dev
+    ```
+
+    The application will be available at [http://localhost:3000](http://localhost:3000).
+
+2. **Build for production:**
+
+    If you're using npm:
+
+    ```bash
+    npm run build
+    npm start
+    ```
+
+    Or if you're using yarn:
+
+    ```bash
+    yarn build
+    yarn start
+    ```
+
+## Technologies Used
+
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **NextAuth**: Authentication for Next.js applications.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+1. **Fork the repository**
+
+2. **Create your feature branch:**
+
+    ```bash
+    git checkout -b feature/YourFeature
+    ```
+
+3. **Commit your changes:**
+
+    ```bash
+    git commit -m 'Add some feature'
+    ```
+
+4. **Push to the branch:**
+
+    ```bash
+    git push origin feature/YourFeature
+    ```
+
+5. **Create a new Pull Request**
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out.
+
+- **Email**: aditya26052002@gmail.com
+- **GitHub**: [blank0826](https://github.com/blank0826/)
