@@ -1,6 +1,6 @@
 # Streamify
 
-Streamify is a Netflix clone built using Next.js, Tailwind CSS, NextAuth, and deployed on Vercel. This application allows users to browse, search, and watch their favorite movies and TV shows. You can checkout the webiste [Streamify](https://stream-haven-fa35.vercel.app/)
+Streamify is a Netflix clone built using Next.js, Tailwind CSS, NextAuth, and deployed on Vercel. This application allows users to browse, search, and watch their favorite movies and TV shows. You can checkout the website [Streamify](https://stream-haven-fa35.vercel.app/)
 
 ## Features
 
