@@ -1,5 +1,5 @@
 import connectToDB from "@/database";
-import Account from "@/models/Account";
+import Favorites from "@/models/Favorite";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
@@ -13,16 +13,16 @@ export async function DELETE(req) {
     if (!id) {
       return NextResponse.json({
         success: false,
-        message: "Account ID is mandatory",
+        message: "Favorite item ID is required",
       });
     }
 
-    const deleteAccount = await Account.findByIdAndDelete(id);
+    const deletedFavoriteItem = await Favorites.findByIdAndDelete(id);
 
-    if (deleteAccount) {
+    if (deletedFavoriteItem) {
       return NextResponse.json({
         success: true,
-        message: "Account deleted successfully",
+        message: "Removed from you list",
       });
     } else {
       return NextResponse.json({

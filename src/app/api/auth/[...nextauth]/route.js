@@ -15,6 +15,7 @@ const authOptions = {
         .toLocaleLowerCase();
 
       session.user.uid = token.sub;
+
       return session;
     },
   },

@@ -1,28 +1,33 @@
 import connectToDB from "@/database";
-import Account from "@/models/Account";
+import Favorites from "@/models/Favorite";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-export async function DELETE(req) {
+export async function POST(req) {
   try {
     await connectToDB();
-    const { searchParams } = new URL(req.url);
-    const id = searchParams.get("id");
 
-    if (!id) {
+    const data = await req.json();
+
+    const isFavoriteAlreadyExists = await Favorites.find({
+      uid: data.uid,
+      movieID: data.movieID,
+      accountID: data.accountID,
+    });
+    if (isFavoriteAlreadyExists && isFavoriteAlreadyExists.length > 0) {
       return NextResponse.json({
         success: false,
-        message: "Account ID is mandatory",
+        message: "This is already added to your list",
       });
     }
 
-    const deleteAccount = await Account.findByIdAndDelete(id);
+    const newlyAddedFavorite = await Favorites.create(data);
 
-    if (deleteAccount) {
+    if (newlyAddedFavorite) {
       return NextResponse.json({
         success: true,
-        message: "Account deleted successfully",
+        message: "Added to your list successfully",
       });
     } else {
       return NextResponse.json({

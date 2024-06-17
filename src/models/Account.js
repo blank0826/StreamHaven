@@ -9,6 +9,7 @@ const NewAccountSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Account = mongoose.models.Account || mongoose.model('Account', NewAccountSchema);
+const Account =
+  mongoose.models.Account || mongoose.model("Account", NewAccountSchema);
 
 export default Account;
